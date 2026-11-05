@@ -107,7 +107,7 @@
 # num_list2 = [19, 22, 42, 54, 67, 66, 78, 99]
 # num_list = num_list1 + num_list2
 #
-# print("合并后的原始列表：", num_list1)
+# print("合并后的原始列表：", num_list)
 #
 # num_list = []
 # for num in num_list1:
@@ -128,7 +128,38 @@
 
 
 
-#列表推导式   [for i in 序列/列表 if 条件]
-num_list = [12, 32, 45, 77, 80, 92, 33, 57, 97, 98, 110, 111, 122]
-new_list = [i**2 for i in num_list if i % 2 == 0]
-print(new_list)
+# #列表推导式   [for i in 序列/列表 if 条件]
+# num_list = [12, 32, 45, 77, 80, 92, 33, 57, 97, 98, 110, 111, 122]
+# new_list = [i**2 for i in num_list if i % 2 == 0]
+# print(new_list)
+
+
+#练习1
+# list1 = ['M', 'A', 'C', 'E', 'F', 'G', 'H', 'L', 'N', 'I','J', 'K', 'O']
+# list2 = ['X', 'Z', 'T', 'Y', 'D', 'E', 'F', 'G']
+# list3 = ['W', 'A', 'S', 'D']
+# list = list1 + list2 + list3
+# print("合并后：" ,list)
+#
+# list = []
+# for i in list1:
+#     if i not in list:
+#         list.append(i)
+# for i in list2:
+#     if i not in list:
+#         list.append(i)
+# print("去除重复后：", list)
+#
+# list.sort()
+# print("排序后：", list)
+
+#练习二
+# list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,30]
+# list = [i**2 for i in list1 if i % 5 == 0 or i % 3 == 0]
+# print(list)
+
+
+#练习三
+list1 = [11, 2, 31, 4, -5, 15, 17, 28, 49, 10, -11, 16, 54, -14, 36, -16, 87, -39]
+list = [i for i in list1 if i > 0]
+print(list)
