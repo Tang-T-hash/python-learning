@@ -81,19 +81,41 @@ from audioop import avg
 # print(count_aeiou("FHELLO houulae ok"))
 
 
-def calc_score(score_list):
-    """
-    计算传入的班级学员高考成绩列表中成绩的最高分，最低分， 平均分
-    :param score_list: 分数列表
-    :return:   最高分， 最低分， 平均分
-    """
-    max_s = max(score_list)
-    min_s = min(score_list)
-    avg_s = round(sum(score_list) / len(score_list), 1)
-    return max_s, min_s, avg_s
+# def calc_score(score_list):
+#     """
+#     计算传入的班级学员高考成绩列表中成绩的最高分，最低分， 平均分
+#     :param score_list: 分数列表
+#     :return:   最高分， 最低分， 平均分
+#     """
+#     max_s = max(score_list)
+#     min_s = min(score_list)
+#     avg_s = round(sum(score_list) / len(score_list), 1)
+#     return max_s, min_s, avg_s
+#
+# s_list = [456, 645, 454, 666, 545, 573, 674,700]
+# max_score, min_score, avg_score = calc_score(s_list)
+# print("最高分：", max_score)
+# print("最低分：", min_score)
+# print("平均分：", avg_score)
 
-s_list = [456, 645, 454, 666, 545, 573, 674,700]
-max_score, min_score, avg_score = calc_score(s_list)
-print("最高分：", max_score)
-print("最低分：", min_score)
-print("平均分：", avg_score)
+
+
+#全局变量
+num = 100
+
+def circle_area(R):
+    #局部变量
+    pi = 3.14
+    area = pi * R * R
+    # global关键字用于明确告诉python解释器  在函数中要使用全局变量，使得可以在函数内部修改全局变量的值
+    global num
+    num = 10000
+    print("num=",num)
+
+    return area
+
+#调用函数
+c_area = circle_area(10)
+print(c_area)
+
+print("num=", num)
