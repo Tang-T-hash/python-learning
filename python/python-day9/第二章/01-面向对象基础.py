@@ -58,7 +58,7 @@
 #         print(f"{self.brand} {self.name} 正在高速行驶中...")
 #
 #     def total_cost(self, discount, rate = 0.1):
-#         tatal_cost = self.price * discount + self.price * rate
+#         total_cost = self.price * discount + self.price * rate
 #         return tatal_cost
 #
 # #测试
@@ -66,7 +66,7 @@
 # c1.running()
 #
 # total = c1.total_cost(0.9, 0.1)
-# print("提车总费用为" ,{total})
+# print(f"提车总费用为 {total}")
 
 
 
@@ -89,7 +89,7 @@
 #
 #     # 魔法方法
 #     def __str__(self):
-#         return f"{self.color}, {self.brand}, {self.name}, {self.price})"
+#         return f"{self.color}, {self.brand}, {self.name}, {self.price}"
 #
 #     def __eq__(self, other):
 #         return self.color == other.color and self.brand == other.brand and self.name == other.name and self.price == other.price
@@ -124,7 +124,7 @@ class Car:
         self.brand = c_brand
         self.name = c_name
         self.price = c_price
-        self.wheel = 2
+        # self.wheel = 2
 
     def running(self):
         print(f"{self.brand} {self.name} 正在高速行驶中....")
