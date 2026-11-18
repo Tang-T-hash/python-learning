@@ -135,22 +135,26 @@ class EduManagement:
             print()
 
             choice = input("请选择你要进行的操作1-6:")
-            match choice:
-                case "1":
-                    self.add_student()   #添加学生信息
-                case "2":
-                    self.update_student()   #修改学生信息
-                case "3":
-                    self.delete_student()   #删除学生信息
-                case "4":
-                    self.query_student()   #查询指定学生信息
-                case "5":
-                    self.list_student()   #查询所有学生信息
-                case "6":
-                    break   #退出系统
-                case _:
-                    print("输入错误，请选择1-6！！")
-
+            try:
+                match choice:
+                    case "1":
+                        self.add_student()  # 添加学生信息
+                    case "2":
+                        self.update_student()  # 修改学生信息
+                    case "3":
+                        self.delete_student()  # 删除学生信息
+                    case "4":
+                        self.query_student()  # 查询指定学生信息
+                    case "5":
+                        self.list_student()  # 查询所有学生信息
+                    case "6":
+                        break  # 退出系统
+                    case _:
+                        print("输入错误，请选择1-6！！")
+            except ValueError:
+                print("输入的数据有问题，请检查，然后重新输入！")
+            except Exception:
+                print("程序运行出错，请重新选择！")
 
 
 
